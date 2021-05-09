@@ -1,20 +1,20 @@
 Package.describe({
-  name: 'iron:middleware-stack',
-  summary: 'Client and server middleware support inspired by Connect.',
-  version: '1.1.0',
-  git: 'https://github.com/iron-meteor/iron-middleware-stack'
+  name: 'meteorhubdotnet:iron-middleware-stack',
+  summary: 'Fork of iron:middleware-stack for Firestorm',
+  version: '1.0.0',
+  git: 'https://github.com/meteorhubdotnet/firestorm-iron-middleware-stack'
 });
 
 Package.on_use(function (api) {
-  api.versionsFrom('METEOR@0.9.2');
+  api.versionsFrom('METEOR@2.2');
 
   api.use('underscore');
   api.use('ejson');
 
-  api.use('iron:core@1.0.11');
-  api.imply('iron:core');
+  api.use('meteorhubdotnet:firestorm-iron-core');
+  api.imply('meteorhubdotnet:firestorm-iron-core');
 
-  api.use('iron:url@1.0.11');
+  api.use('meteorhubdotnet:firestorm-iron-url');
 
   api.add_files('lib/handler.js');
   api.add_files('lib/middleware_stack.js');
@@ -22,7 +22,7 @@ Package.on_use(function (api) {
 });
 
 Package.on_test(function (api) {
-  api.use('iron:middleware-stack');
+  api.use('meteorhubdotnet:firestorm-iron-middleware-stack');
   api.use('tinytest');
   api.use('test-helpers');
   api.add_files('test/handler_test.js');
