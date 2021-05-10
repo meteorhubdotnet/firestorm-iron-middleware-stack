@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'meteorhubdotnet:iron-middleware-stack',
+  name: 'meteorhubdotnet:firestorm-iron-middleware-stack',
   summary: 'Fork of iron:middleware-stack for Firestorm',
   version: '1.0.0',
   git: 'https://github.com/meteorhubdotnet/firestorm-iron-middleware-stack'
